@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d2D-Wp-jUM">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="lZv-1x-beL">
+            <objects>
+                <viewController id="d2D-Wp-jUM" customClass="ViewController" customModule="damier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KQz-QS-3Ib">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="scg-ry-W6K">
+                                <rect key="frame" x="166.5" y="48.5" width="691" height="691"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="scg-ry-W6K" secondAttribute="height" multiplier="1:1" id="aaa-56-4X3"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9OE-HS-CZl">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="1vk-c8-ZgR" customClass="PawnBoxCell" customModule="damier" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqQ-Cl-3lR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bois_damier" translatesAutoresizingMaskIntoConstraints="NO" id="vfw-jn-CkN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="vfw-jn-CkN" firstAttribute="centerY" secondItem="jqQ-Cl-3lR" secondAttribute="centerY" id="H6B-Cn-2uH"/>
+                                                        <constraint firstItem="vfw-jn-CkN" firstAttribute="width" secondItem="jqQ-Cl-3lR" secondAttribute="width" id="Oyz-dW-lr2"/>
+                                                        <constraint firstItem="vfw-jn-CkN" firstAttribute="centerX" secondItem="jqQ-Cl-3lR" secondAttribute="centerX" id="k6J-zh-xZg"/>
+                                                        <constraint firstItem="vfw-jn-CkN" firstAttribute="height" secondItem="jqQ-Cl-3lR" secondAttribute="height" id="oFx-Fq-gp9"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="jqQ-Cl-3lR" firstAttribute="centerY" secondItem="1vk-c8-ZgR" secondAttribute="centerY" id="201-c8-pbN"/>
+                                            <constraint firstItem="jqQ-Cl-3lR" firstAttribute="centerX" secondItem="1vk-c8-ZgR" secondAttribute="centerX" id="370-1p-1Wl"/>
+                                            <constraint firstItem="jqQ-Cl-3lR" firstAttribute="width" secondItem="1vk-c8-ZgR" secondAttribute="width" id="BnX-um-0Lf"/>
+                                            <constraint firstItem="jqQ-Cl-3lR" firstAttribute="height" secondItem="1vk-c8-ZgR" secondAttribute="height" id="SVr-3X-fgu"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="caseBackgroundImageView" destination="vfw-jn-CkN" id="Lqg-j7-mFu"/>
+                                            <outlet property="pionView" destination="jqQ-Cl-3lR" id="A5f-Fi-LF6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="scg-ry-W6K" firstAttribute="centerX" secondItem="KQz-QS-3Ib" secondAttribute="centerX" id="4Im-uv-ubA"/>
+                            <constraint firstItem="scg-ry-W6K" firstAttribute="centerY" secondItem="KQz-QS-3Ib" secondAttribute="centerY" constant="10" id="Zk7-Cq-bpp"/>
+                            <constraint firstItem="scg-ry-W6K" firstAttribute="width" secondItem="KQz-QS-3Ib" secondAttribute="width" multiplier="0.9" priority="750" id="h4b-if-JaO"/>
+                            <constraint firstItem="scg-ry-W6K" firstAttribute="height" secondItem="KQz-QS-3Ib" secondAttribute="height" multiplier="0.9" id="taz-IT-7Fd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OqJ-JR-QfP"/>
+                    </view>
+                    <connections>
+                        <outlet property="BoardAsCollectionView" destination="scg-ry-W6K" id="dQA-4Y-TJY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSy-4d-ArT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1238" y="-1094"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bois_damier" width="2480" height="1778"/>
+    </resources>
+</document>
