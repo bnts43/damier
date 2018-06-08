@@ -14,9 +14,24 @@ public class Board {
     
     init() {
         var isBlack = false
-        for x in 1...10 {
-            for y in 1...10 {
-                cells.append(PawnBoxInfo(cell: PawnBoxCell(), x: x,y: y,isBlack: isBlack, pion: nil))
+        for x in 0...9 {
+            isBlack = !isBlack
+            for y in 0...9 {
+                var pion : Pawn?
+                if ( y < 4 )
+                {
+                    if ( ( x % 2 > 0 && ((y+1) % 2 > 0)) || ( (x+1) % 2 > 0 && (y % 2 > 0))) {
+                        pion = Pawn()
+                    }
+                }
+                if (y > 5 )
+                {
+                    if ( ( x % 2 > 0 && ((y+1) % 2 > 0)) || ( (x+1) % 2 > 0 && (y % 2 > 0))) {
+                        pion = Pawn()
+                        pion!.isWhite = true
+                    }
+                }
+                cells.append(PawnBoxInfo(cell: PawnBoxCell(), x: x,y: y,isBlack: isBlack, pion: pion))
                 isBlack = !isBlack
             }
         }

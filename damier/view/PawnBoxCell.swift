@@ -17,7 +17,6 @@ class PawnBoxCell : UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        pionView.layer.cornerRadius = frame.size.width / 2.0
     }
     
     override func prepareForReuse() {
@@ -30,14 +29,16 @@ class PawnBoxCell : UICollectionViewCell {
     func configure(withCase casePion: PawnBoxInfo?) {
         if let casePion = casePion {
             pionView.backgroundColor = casePion.isBlack ? UIColor.black : UIColor.white
+            pionView.layer.cornerRadius = 0
+            caseBackgroundImageView.alpha = 0.5
+
             if let pion = casePion.pion {
+                pionView.layer.cornerRadius = frame.size.width / 2.0
                 if  pion.isWhite {
-                    caseBackgroundImageView.alpha = 1.0
+                    pionView.backgroundColor = UIColor.white
                 } else {
-                    caseBackgroundImageView.alpha = 0.5
-            }
-            } else {
-                caseBackgroundImageView.alpha = 0.0
+                    pionView.backgroundColor = UIColor.black
+                }
             }
         }
     }
