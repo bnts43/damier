@@ -12,6 +12,8 @@ public class Board {
     
     var cells = [PawnBoxInfo]()
     
+    var isToTopForBlack : Bool = false
+    
     init() {
         var isBlack = false
         for x in 0...9 {
@@ -31,7 +33,7 @@ public class Board {
                         pion!.isWhite = true
                     }
                 }
-                cells.append(PawnBoxInfo(cell: PawnBoxCell(), x: x,y: y,isBlack: isBlack, pion: pion))
+                cells.append(PawnBoxInfo(cell: PawnBoxCell(), x: x,y: y,isBlack: isBlack, pion: pion!))
                 isBlack = !isBlack
             }
         }
