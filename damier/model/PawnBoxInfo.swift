@@ -15,7 +15,7 @@ class PawnBoxInfo {
     var isBlack=false
     var pion : Pawn?
 
-    init(cell: PawnBoxCell, x: Int,y: Int,isBlack: Bool, pion: Pawn) {
+    init(cell: PawnBoxCell, x: Int,y: Int,isBlack: Bool, pion: Pawn?) {
         self.cell = cell
         self.x = x
         self.y = y

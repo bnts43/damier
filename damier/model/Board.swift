@@ -33,7 +33,7 @@ public class Board {
                         pion!.isWhite = true
                     }
                 }
-                cells.append(PawnBoxInfo(cell: PawnBoxCell(), x: x,y: y,isBlack: isBlack, pion: pion!))
+                cells.append(PawnBoxInfo(cell: PawnBoxCell(), x: x,y: y,isBlack: isBlack, pion: pion))
                 isBlack = !isBlack
             }
         }
